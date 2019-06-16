@@ -30,8 +30,11 @@ public class JsonRpcController : JsonRpcControllerBase
 
 ```
 
+# JsonRpc Request
+
 ```js
 //request
+//replace 'EchoProfile' to the method name of your web api controller
 {
   "jsonrpc": "2.0",
   "id": 99,
