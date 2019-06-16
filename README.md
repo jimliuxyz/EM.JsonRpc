@@ -16,13 +16,14 @@ public void ConfigureServices(IServiceCollection services)
 
 
 ```cs
-//your jsonrpc controller
+//add your jsonrpc controller
 
 public class JsonRpcController : JsonRpcControllerBase
 {
     [HttpPost]
     public async Task<ActionResult<Object>> Query(JsonRpcRequest reqest)
     {
+        //replace WebApiController to your web api controller
         return await QueryControllerAsync(typeof(WebApiController), reqest);
     }
 }
