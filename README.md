@@ -2,6 +2,12 @@
 
 Automatically map JsonRpc to existing web api.
 
+# Install
+
+```
+dotnet add package EM.JsonRpc --version 0.0.1
+```
+
 # Usage
 
 ```cs
@@ -13,7 +19,6 @@ public void ConfigureServices(IServiceCollection services)
 }
 
 ```
-
 
 ```cs
 //add your jsonrpc controller

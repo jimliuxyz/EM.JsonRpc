@@ -26,7 +26,7 @@ namespace Example.JsonRpc
             services.AddSwaggerGen(c =>
             {
                 c.ExampleFilters();
-                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "Test JsonRpc map to web api", Version = "v1" });
             });
             services.AddSwaggerExamples();
         }
@@ -37,16 +37,17 @@ namespace Example.JsonRpc
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c =>
-                {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-                });
             }
             else
             {
                 app.UseHsts();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
 
             app.UseHttpsRedirection();
             app.UseMvc();
