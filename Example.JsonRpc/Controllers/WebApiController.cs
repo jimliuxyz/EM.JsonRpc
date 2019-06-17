@@ -31,7 +31,7 @@ namespace Example.JsonRpc.Controllers
         }
 
         /// <summary>
-        /// test 1
+        /// test case 1
         /// </summary>
         /// <param name="dto"></param>
         /// <returns></returns>
@@ -42,7 +42,7 @@ namespace Example.JsonRpc.Controllers
         }
 
         /// <summary>
-        /// test 2
+        /// test case 2
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>

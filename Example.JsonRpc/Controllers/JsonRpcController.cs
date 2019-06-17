@@ -23,7 +23,7 @@ namespace Example.JsonRpc.Controllers
 
 
         /// <summary>
-        /// list error code
+        /// list jsonrpc error code
         /// </summary>
         [HttpGet("ListErrorCode")]
         [Produces("application/json")]

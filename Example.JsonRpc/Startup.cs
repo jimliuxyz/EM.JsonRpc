@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using System.IO;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -26,6 +28,10 @@ namespace Example.JsonRpc
             services.AddSwaggerGen(c =>
             {
                 c.ExampleFilters();
+
+                var filePath = Path.Combine(AppContext.BaseDirectory, "Api.xml");
+                c.IncludeXmlComments(filePath);
+
                 c.SwaggerDoc("v1", new Info { Title = "Test JsonRpc map to web api", Version = "v1" });
             });
             services.AddSwaggerExamples();
